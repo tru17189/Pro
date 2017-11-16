@@ -1,3 +1,8 @@
+
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -88,7 +93,6 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1400, 700));
 
         jLabel3.setText("Bienvenido al programa de cambio de carrera, este proyecto fue creado únicamente con el fin de agilizar el  ");
 
@@ -317,7 +321,7 @@ public class Principal extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 0, 51));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Mira los cursos por covalidar");
+        jButton2.setText("Descubre una nueva carrera");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -866,7 +870,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:        
-        Cuestionario quiz = new Cuestionario();
+        Cuestionario quiz = null;
+        try {
+            quiz = new Cuestionario();
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
         quiz.setVisible(true);  
     }//GEN-LAST:event_jButton1ActionPerformed
 

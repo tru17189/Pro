@@ -1,11 +1,22 @@
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
 import javax.swing.JFrame;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
-
+import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.query.Query;
+import com.mongodb.MongoClient;
+import java.net.UnknownHostException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,10 +28,12 @@ import org.jfree.data.category.DefaultCategoryDataset;
  * @author ottoalexander
  */
 public class Cuestionario extends javax.swing.JFrame {
-
+DB db;
+DBCollection tabla;
     /**
      * Creates new form Cuestionario
      */
+        
     JFreeChart Grafica; 
     DefaultCategoryDataset Datos = new DefaultCategoryDataset();
     JFreeChart Grafica2; 
@@ -33,16 +46,30 @@ public class Cuestionario extends javax.swing.JFrame {
     DefaultCategoryDataset Datos5 = new DefaultCategoryDataset();
     JFreeChart Grafica6; 
     DefaultCategoryDataset Datos6 = new DefaultCategoryDataset();
-      int numero = 0;
-      int numeroP1_1; int numeroP1_2; int numeroP1_3; int numeroP1_4;
-      int numeroP2_1; int numeroP2_2; int numeroP2_3; int numeroP2_4;
-      int numeroP3_1; int numeroP3_2;  
-      int numeroP4_1; int numeroP4_2; int numeroP4_3; int numeroP4_4;
-      int numeroP5_1; int numeroP5_2; int numeroP5_3; int numeroP5_4;
-      int numeroP6_1; int numeroP6_2; int numeroP6_3; int numeroP6_4;
+    Base b = new Base();
      
-    public Cuestionario() {
-        initComponents();
+    public Cuestionario() throws UnknownHostException {
+        
+        MongoClient mongo = new MongoClient();//Permite el accesso a la base de datos
+        Morphia morphia = new Morphia();//crea un objeto tipo morphia
+        morphia.mapPackage("default package");////Permite usar morphia para poder traducir de java a mongo
+        Datastore ds = morphia.createDatastore((MongoClient) (Mongo) mongo, "BaseE"); // Base Dato
+        Query<Base> query;// crea un query 
+        
+        query = ds.createQuery(Base.class);//crea el query 
+        List<Base> bases = query.asList();//mete la lita de query en la base de datos
+        Base Respuestas = bases.get(0);//saca el pimer valor de la base 
+        
+        for (Base miBase: bases){
+            ds.delete(miBase);//borra la base vieja
+        }
+        ds.save(Respuestas);//Guarda la nueva base
+        //observar la base de datos
+        query = ds.createQuery(Base.class);
+        bases = query.asList();
+        for (Base miBase: bases){
+            System.out.println(miBase.numeroP1_1);
+        }
     }
 
     /**
@@ -54,6 +81,13 @@ public class Cuestionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -61,7 +95,6 @@ public class Cuestionario extends javax.swing.JFrame {
         P1_3 = new javax.swing.JRadioButton();
         P1_2 = new javax.swing.JRadioButton();
         P1_4 = new javax.swing.JRadioButton();
-        jScrollBar1 = new javax.swing.JScrollBar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -116,6 +149,7 @@ public class Cuestionario extends javax.swing.JFrame {
 
         jLabel2.setText("-Cuanto tiempo a meditado esta decisión: ");
 
+        buttonGroup1.add(P1_1);
         P1_1.setText("Una semana ");
         P1_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,10 +157,13 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(P1_3);
         P1_3.setText("Hace un mes aproximadamente");
 
+        buttonGroup1.add(P1_2);
         P1_2.setText("Desde este semestre ");
 
+        buttonGroup1.add(P1_4);
         P1_4.setText("Desde el semestre pasado");
 
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
@@ -147,8 +184,9 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("-Con quien más lo hablado (puedes elegir más de una opción): ");
+        jLabel3.setText("-Con quien más lo hablado: ");
 
+        buttonGroup2.add(P2_1);
         P2_1.setText("Con mis papas");
         P2_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,8 +194,10 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup2.add(P2_3);
         P2_3.setText("Con mis profesores y director de carrera");
 
+        buttonGroup2.add(P2_2);
         P2_2.setText("Con mis amigos");
         P2_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +205,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup2.add(P2_4);
         P2_4.setText("Con nadie");
 
         jButton3.setBackground(new java.awt.Color(153, 153, 255));
@@ -178,6 +219,7 @@ public class Cuestionario extends javax.swing.JFrame {
 
         jLabel5.setText("-¿Tienen una buena relación con el jefe de carrera?");
 
+        buttonGroup3.add(P3_1);
         P3_1.setText("Si");
         P3_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +227,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup3.add(P3_2);
         P3_2.setText("No");
 
         jButton4.setBackground(new java.awt.Color(153, 153, 255));
@@ -205,6 +248,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup4.add(P4_1);
         P4_1.setText("Muy poco");
         P4_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,10 +256,13 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup4.add(P4_2);
         P4_2.setText("Creo tener una idea");
 
+        buttonGroup4.add(P4_3);
         P4_3.setText("Lo suficiente");
 
+        buttonGroup4.add(P4_4);
         P4_4.setText("Me he informado bien");
 
         jLabel8.setText("-¿Que tan conoces de la nueva carrera? ");
@@ -229,6 +276,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup5.add(P5_1);
         P5_1.setText("Siento mucha dificultad");
         P5_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,6 +284,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup5.add(P5_2);
         P5_2.setText("Me parece aburrida la actual");
         P5_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,8 +292,10 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup5.add(P5_3);
         P5_3.setText("Alguien mas me obligo a llevarla");
 
+        buttonGroup5.add(P5_4);
         P5_4.setText("Mas de una de las razones anteriores");
 
         jLabel9.setText("-¿Por que razon lo hace?");
@@ -258,6 +309,7 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup6.add(P6_1);
         P6_1.setText("Muchas diferencia");
         P6_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,10 +317,13 @@ public class Cuestionario extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup6.add(P6_2);
         P6_2.setText("Alejarme de un tema en especifico");
 
+        buttonGroup6.add(P6_3);
         P6_3.setText("Alejarme de los compañeros de la anterior carrera");
 
+        buttonGroup6.add(P6_4);
         P6_4.setText("Pocas diferencias");
 
         jLabel10.setText("-¿Que esperas de la nueva carrera?");
@@ -355,8 +410,7 @@ public class Cuestionario extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel10))
                         .addGap(15, 66, Short.MAX_VALUE)))
-                .addGap(20, 20, 20)
-                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,7 +490,6 @@ public class Cuestionario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
-            .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -449,98 +502,102 @@ public class Cuestionario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(P1_1.isSelected()){
-           numeroP1_1 = numero +1;}
-        if(P1_2.isSelected()){
-            numeroP1_2 = numero +1;}
-        if(P1_3.isSelected()){
-            numeroP1_3 = numero +1;}
-        if(P1_4.isSelected()){
-            numeroP1_4 = numero +1;}
+        BasicDBObject document= new BasicDBObject();
         
-        Datos.addValue(numeroP1_1,"Cuestionario", "Una semana ");
-        Datos.addValue(numeroP1_2,"Cuestionario", "Hace un mes aproximadamente");
-        Datos.addValue(numeroP1_3,"Cuestionario", "Desde este semestre ");
-        Datos.addValue(numeroP1_4,"Cuestionario", "Desde el semestre pasado");
+        if(P1_1.isSelected()){
+         b.numeroP1_1 = b.numero +1;
+         document.put("p1_1", ""+b.numeroP1_1+"");
+         tabla.insert(document);}
+        if(P1_2.isSelected()){
+            b.numeroP1_2 = b.numero +1;}
+        if(P1_3.isSelected()){
+            b.numeroP1_3 = b.numero +1;}
+        if(P1_4.isSelected()){
+            b.numeroP1_4 = b.numero +1;}
+        
+        Datos.addValue(b.numeroP1_1,"Cuestionario", "Una semana ");
+        Datos.addValue(b.numeroP1_2,"Cuestionario", "Hace un mes aproximadamente");
+        Datos.addValue(b.numeroP1_3,"Cuestionario", "Desde este semestre ");
+        Datos.addValue(b.numeroP1_4,"Cuestionario", "Desde el semestre pasado");
         Grafica = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos,
         PlotOrientation.HORIZONTAL , true, true, false);
         
           if(P2_1.isSelected()){
-           numeroP2_1 = numero +1;}
+           b.numeroP2_1 = b.numero +1;}
         if(P2_2.isSelected()){
-            numeroP2_2 = numero +1;}
+            b.numeroP2_2 = b.numero +1;}
         if(P2_3.isSelected()){
-            numeroP2_3 = numero +1;}
+            b.numeroP2_3 = b.numero +1;}
         if(P2_4.isSelected()){
-            numeroP2_4 = numero +1;}
+            b.numeroP2_4 = b.numero +1;}
         
-        Datos2.addValue(numeroP2_1,"Cuestionario", "Con mis papas");
-        Datos2.addValue(numeroP2_2,"Cuestionario", "Con mis amigos");
-        Datos2.addValue(numeroP2_3,"Cuestionario", "Con mis profesores y director de carrera");
-        Datos2.addValue(numeroP2_4,"Cuestionario", "Con nadie");
+        Datos2.addValue(b.numeroP2_1,"Cuestionario", "Con mis papas");
+        Datos2.addValue(b.numeroP2_2,"Cuestionario", "Con mis amigos");
+        Datos2.addValue(b.numeroP2_3,"Cuestionario", "Con mis profesores y director de carrera");
+        Datos2.addValue(b.numeroP2_4,"Cuestionario", "Con nadie");
         Grafica2 = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos2,
         PlotOrientation.HORIZONTAL , true, true, false);
         
         if(P3_1.isSelected()){
-           numeroP3_1 = numero +1;}
+           b.numeroP3_1 = b.numero +1;}
         if(P3_2.isSelected()){
-            numeroP3_2 = numero +1;}
+            b.numeroP3_2 = b.numero +1;}
        
-        Datos3.addValue(numeroP3_1,"Cuestionario", "Si");
-        Datos3.addValue(numeroP3_2,"Cuestionario", "No");
+        Datos3.addValue(b.numeroP3_1,"Cuestionario", "Si");
+        Datos3.addValue(b.numeroP3_2,"Cuestionario", "No");
         Grafica3 = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos3,
         PlotOrientation.HORIZONTAL , true, true, false);
         
         if(P4_1.isSelected()){
-           numeroP4_1 = numero +1;}
+           b.numeroP4_1 = b.numero +1;}
         if(P4_2.isSelected()){
-            numeroP4_2 = numero +1;}
+            b.numeroP4_2 = b.numero +1;}
         if(P4_3.isSelected()){
-            numeroP4_3 = numero +1;}
+            b.numeroP4_3 = b.numero +1;}
         if(P4_4.isSelected()){
-            numeroP4_4 = numero +1;}
+            b.numeroP4_4 = b.numero +1;}
        
-        Datos4.addValue(numeroP4_1,"Cuestionario", "Muy poco");
-        Datos4.addValue(numeroP4_2,"Cuestionario", "Creo tener una idea");
-        Datos4.addValue(numeroP4_3,"Cuestionario", "Lo suficiente");
-        Datos4.addValue(numeroP4_4,"Cuestionario", "Me he informado bien");
+        Datos4.addValue(b.numeroP4_1,"Cuestionario", "Muy poco");
+        Datos4.addValue(b.numeroP4_2,"Cuestionario", "Creo tener una idea");
+        Datos4.addValue(b.numeroP4_3,"Cuestionario", "Lo suficiente");
+        Datos4.addValue(b.numeroP4_4,"Cuestionario", "Me he informado bien");
         Grafica4 = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos4,
         PlotOrientation.HORIZONTAL , true, true, false);
         
         if(P5_1.isSelected()){
-           numeroP5_1 = numero +1;}
+           b.numeroP5_1 = b.numero +1;}
         if(P5_2.isSelected()){
-            numeroP5_2 = numero +1;}
+            b.numeroP5_2 = b.numero +1;}
         if(P5_3.isSelected()){
-            numeroP5_3 = numero +1;}
+            b.numeroP5_3 = b.numero +1;}
         if(P5_4.isSelected()){
-            numeroP5_4 = numero +1;}
+            b.numeroP5_4 = b.numero +1;}
        
-        Datos5.addValue(numeroP5_1,"Cuestionario", "Siento mucha dificultad");
-        Datos5.addValue(numeroP5_2,"Cuestionario", "Alguien mas me obligo a llevarla");
-        Datos5.addValue(numeroP5_3,"Cuestionario", "Me parece aburrida la actual");
-        Datos5.addValue(numeroP5_4,"Cuestionario", "Mas de una de las razones anteriores");
+        Datos5.addValue(b.numeroP5_1,"Cuestionario", "Siento mucha dificultad");
+        Datos5.addValue(b.numeroP5_2,"Cuestionario", "Alguien mas me obligo a llevarla");
+        Datos5.addValue(b.numeroP5_3,"Cuestionario", "Me parece aburrida la actual");
+        Datos5.addValue(b.numeroP5_4,"Cuestionario", "Mas de una de las razones anteriores");
         Grafica5 = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos5,
         PlotOrientation.HORIZONTAL , true, true, false);
         
          if(P6_1.isSelected()){
-           numeroP6_1 = numero +1;}
+           b.numeroP6_1 = b.numero +1;}
         if(P6_2.isSelected()){
-            numeroP6_2 = numero +1;}
+            b.numeroP6_2 = b.numero +1;}
         if(P6_3.isSelected()){
-            numeroP6_3 = numero +1;}
+            b.numeroP6_3 = b.numero +1;}
         if(P6_4.isSelected()){
-            numeroP6_4 = numero +1;}
+            b.numeroP6_4 = b.numero +1;}
        
-        Datos6.addValue(numeroP6_1,"Cuestionario", "Muchas diferencia");
-        Datos6.addValue(numeroP6_2,"Cuestionario", "Alejarme de un tema en especifico");
-        Datos6.addValue(numeroP6_3,"Cuestionario", "Alejarme de los compañeros de la anterior carrera");
-        Datos6.addValue(numeroP6_4,"Cuestionario", "Pocas diferencias");
+        Datos6.addValue(b.numeroP6_1,"Cuestionario", "Muchas diferencia");
+        Datos6.addValue(b.numeroP6_2,"Cuestionario", "Alejarme de un tema en especifico");
+        Datos6.addValue(b.numeroP6_3,"Cuestionario", "Alejarme de los compañeros de la anterior carrera");
+        Datos6.addValue(b.numeroP6_4,"Cuestionario", "Pocas diferencias");
         Grafica6 = ChartFactory.createBarChart("Respuestas de la pregunta", 
                 "Opciones", "Número de respuestas", Datos6,
         PlotOrientation.HORIZONTAL , true, true, false);
@@ -658,7 +715,11 @@ public class Cuestionario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cuestionario().setVisible(true);
+                try {
+                    new Cuestionario().setVisible(true);
+                } catch (UnknownHostException ex) {
+                    Logger.getLogger(Cuestionario.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -686,6 +747,12 @@ public class Cuestionario extends javax.swing.JFrame {
     private javax.swing.JRadioButton P6_2;
     private javax.swing.JRadioButton P6_3;
     private javax.swing.JRadioButton P6_4;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

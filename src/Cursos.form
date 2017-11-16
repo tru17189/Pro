@@ -23,96 +23,290 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="compu" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="meca" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o1_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o1_2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o2_2" min="-2" max="-2" attributes="0"/>
+                          <Component id="o2_1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="o3_2" min="-2" max="-2" attributes="0"/>
+                          <Component id="o3_1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o4_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o4_2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o5_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o5_2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o6_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o6_2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o7_1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="o7_2" min="-2" max="-2" attributes="0"/>
+                          <Component id="o8_2" min="-2" max="-2" attributes="0"/>
+                          <Component id="o8_1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="Respuesta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="compu2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="meca2" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="102" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="meca" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="compu" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="meca2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="compu2" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="o1_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o1_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="o2_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o2_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o3_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o3_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o4_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o4_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o5_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o5_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o6_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o6_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o7_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o7_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Respuesta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o8_1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="o8_2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="183" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Carrera actual:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="meca">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ing. Mecanica"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="compu">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ing. C. Computacion"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="meca2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ing. Mecanica"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="compu2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ing. C. Computacion"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Carrera Nueva"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="99" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Empezemos"/>
+        <Property name="text" type="java.lang.String" value="Descubre"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="0" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="En este cuestionario, le puede ayudar a eleguir una nueva carrera "/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="1.) En tu tiempo libre prefieres:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o1_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ver pel&#xed;culas, escuchar m&#xfa;sica, cantar en el karaoke, disfrutar del teatro o de la pintura."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o1_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar trabajos de bricolaje, por ejemplo reparaciones electr&#xf3;nicas o jardiner&#xed;a, o practicar deportes, como por ejemplo f&#xfa;tbol, correr, ciclismo o nataci&#xf3;n. "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2.) &#xbf;Qu&#xe9; tipo de trabajo se adapta mejor a ti?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o2_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trabajos con jornadas laborales fijas."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o2_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trabajos con jornadas laborales flexibles."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3.) &#xbf;Qu&#xe9; te hace sentirte m&#xe1;s realizado?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o3_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hacer un buen trabajo por m&#xed; mismo."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o3_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dirigir a un grupo para conseguir mis objetivos."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4.) Preferir&#xed;as ser:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o4_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Artesano y vivir de tus habilidades profesionales."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o4_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Profesor o alguna profesi&#xf3;n en la que pueda ayudar a los dem&#xe1;s, ya que esto me aporta una gran satisfacci&#xf3;n. "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="5.) Si tuvieras la oportunidad de conocer a un genio del pasado, preferir&#xed;as:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o5_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hablar con Einstein, preguntarle su opini&#xf3;n sobre algunos asuntos cient&#xed;ficos y aprender de &#xe9;l su manera de pensar."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o5_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hablar con Freud y sus alumnos, y conocer m&#xe1;s sobre sus vidas y teor&#xed;as como grandes psic&#xf3;logos."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6.) En tu opini&#xf3;n, &#xbf;qui&#xe9;n tiene mayor talento?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o6_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Leonardo Da Vinci - pintor, escultor, m&#xfa;sico, arquitecto, ingeniero e inventor."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o6_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bill Gates, inventor que cambio el estilo de vida de muchas personas. "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="7.) Te aporta una gran satisfacci&#xf3;n y adem&#xe1;s eres bueno en:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o7_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pensar, analizar y jugar a juegos de inteligencia."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o7_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hacer cosas con mis propias manos."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="8.) Si la batidora que acabas de comprar se estropea, t&#xfa;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o8_1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Encuentras el problema y la arreglas t&#xfa; mismo."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="o8_2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Solicitas que te la cambien por otra o que el fabricante realice una reparaci&#xf3;n gratuita. "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Respuesta">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Harrington" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="( )"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
