@@ -45,15 +45,20 @@ public class Alumno {
 	* @param sexo
 	*/
 	public void setSexo(String sexo){
-		this.sexo = sexo;}
+		this.sexo = sexo;
+	}
+	
 	public String getSexo(){
-		return sexo;}
+		return sexo;
+	}
 
 	/**
 	* @param nombre
 	*/
 	public void setNombre(String nombre){
-		this.nombre = nombre;}
+		this.nombre = nombre;
+	}
+	
 	public String getNombre(){
 		return nombre;
 	}
@@ -64,6 +69,7 @@ public class Alumno {
 	public void setCarnet(long Carnet){
 		this.Carnet = Carnet;
 	}
+	
 	public long getCarnet(){
 		return Carnet;
 	}
@@ -72,9 +78,12 @@ public class Alumno {
 	* @param suCarrera
 	*/
 	public void setCarrera(Carrera suCarrera){
-		miCarrera = suCarrera;}
+		miCarrera = suCarrera;
+	}
+	
 	public Carrera getCarrera(){
-		return miCarrera;}
+		return miCarrera;
+	}
         
 	/**
 	* @param suNuevaCarrera
