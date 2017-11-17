@@ -6,11 +6,14 @@ public class Carrera{
         ArrayList<String> comparar = new ArrayList<String>();
         ArrayList<String> imprimir = new ArrayList<String>();
         ArrayList<String> aprobar = new ArrayList<String>();
-	public Carrera(String nombre){
+	
+        public Carrera(String nombre){
         this.nombre= nombre;
         semestres = new ArrayList<Semestre>();
             
 	}
+        
+        public Carrera(){}
 
 	public void agregarSemestre(String nombre, String curso1, String curso2, String curso3, String curso4, String curso5, String curso6){
             Semestre semestre1 = new Semestre(nombre, curso1, curso2, curso3, curso4, curso5, curso6);

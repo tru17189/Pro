@@ -35,16 +35,16 @@ public class Metodos {
         matematica.agregarSemestre("Semestre10","","","","","","");
         
     //Semestres de MECANICA:
-        mecanica.agregarSemestre("Semestre1", "Pensamiento cuantitativo", "introducción a la ingeniería mecánica","dibujo mecánico", "algoritmos y programación básica", "Química general","ciudadanía global");
-        mecanica.agregarSemestre("Semestre2", "cálculo1", "física 1", "manufactura digital", "ciencias dela vida", "estadística 1", "comunicación efectiva");
-        mecanica.agregarSemestre("Semestre3","Cálculo 2", "Álgebra Lineal 1", "Física 2", "Materiales 1", "Soldadura industrial", "Investigación y pensamiento científico" );
+        mecanica.agregarSemestre("Semestre1", "pensamiento cuantitativo", "introduccion a la ingeniería mecanica","dibujo mecanico", "algoritmos y programación basica", "Quimica general","ciudadania global");
+        mecanica.agregarSemestre("Semestre2", "calculo1", "fisica 1", "manufactura digital", "ciencias dela vida", "estadistica 1", "comunicacion efectiva");
+        mecanica.agregarSemestre("Semestre3","calculo 2", "algebra Lineal 1", "fisica 2", "materiales 1", "soldadura industrial", "investigación y pensamiento cientifico" );
         mecanica.agregarSemestre("Semestre4", "guatemala en el contexto mundial", "ecuaciones diferenciales 1", "mecanica 1: estatica", "introduccion a ingenieria electrica", "maquinas herramienta", "retos ambientes y sostenibilidad");
         mecanica.agregarSemestre("Semestre5","metodos numéricos en ingenieria mecanica", "termodinamica 1", "mecanica 2: dinamica", "resistencia de materiales 1", "selectivo (formacion general)", "emprendimiento e innovacion");
         mecanica.agregarSemestre("Semestre6","mecanica de fluidos 1", "termodinamica 2", "resistencia de materiales 2", "materiales 2", "mecanismos", "selectivo (formacion general)");
-        mecanica.agregarSemestre("Semestre7", "mecanica de fluidos 2", "diseño de ingenieria mecanica 1", "transferencia de calor", "introduccion a diseño y manufactura cad cam", "procesos industriales", "economia de empresas");
-        mecanica.agregarSemestre("Semestre8","máquinas electromecanicas", "vibraciones mecanicas", "motores de combustion interna", "diseño de ingenieria mecanica 2", "sistemas hidraulicos y neumaticos", "curso selectivo (area de ingenieria para el desarrollo)");
+        mecanica.agregarSemestre("Semestre7", "mecanica de fluidos 2", "diseno de ingenieria mecanica 1", "transferencia de calor", "introduccion a diseno y manufactura cad cam", "procesos industriales", "economia de empresas");
+        mecanica.agregarSemestre("Semestre8","maquinas electromecanicas", "vibraciones mecanicas", "motores de combustion interna", "diseño de ingenieria mecanica 2", "sistemas hidraulicos y neumaticos", "curso selectivo (area de ingenieria para el desarrollo)");
         mecanica.agregarSemestre("Semestre9", "generacion de potencia", "ingenieria economica", "energia renovable (ingenieria mecanica)", "refrigeracion y acondicionamiento de aire", "diseño e innovacion en ingenieria 1", "elementos finitos");
-        mecanica.agregarSemestre("Semestre10", "sistemas de control", "gestion de mantenimiento industrial", "curso selectivo (área profesional)","gestion de proyectos", "diseño e innovacion en ingeniería 2", "practica profesional");
+        mecanica.agregarSemestre("Semestre10", "sistemas de control", "gestion de mantenimiento industrial", "curso selectivo (area profesional)","gestion de proyectos", "diseno e innovacion en ingenieria 2", "practica profesional");
        
     //Semestres de ADMINISTRACION
         administracion.agregarSemestre("Semestre1","pensamiento cuantitativo", "algoritmos y programacion basica", "ciencias de la vida","contabilidad 1", "ciudadania global", "introduccion a la innovacion y los negocios");
@@ -62,41 +62,67 @@ public class Metodos {
         civil.agregarSemestre("Semestre1","dibujo cad", "pensamiento cuantitativo", "ciencias de la vida", "comunicacion efectiva",  "quimica general", "introduccion a la ingenieria civil");
         civil.agregarSemestre("Semestre2","estadistica 1", "algoritmos y programacion basica", "ciudadania global", "fisica 1", "calculo 1", "materiales 1");
         civil.agregarSemestre("Semestre3","guatemala en el contexto mundial", "fisica 2", "geologia", "calculo 2", "algebra lineal 1", "modelado de informacion para edificaciones");
-        civil.agregarSemestre("Semestre4","retos ambientales y sostenibilidad", "selectivo microeconomia o investigacion de operaciones", "mecanica 1 (estatica)", "carpinteria", "ecuaciones diferenciales", "Investigacion y pensamiento cientifico");
+        civil.agregarSemestre("Semestre4","retos ambientales y sostenibilidad", "selectivo microeconomia o investigacion de operaciones", "mecanica 1 (estatica)", "carpinteria", "ecuaciones diferenciales", "investigacion y pensamiento cientifico");
         civil.agregarSemestre("Semestre5","resistencia de materiales 1", "topografia general","mecanica de fluidos 1", "analisis estructural 1", "mecanica de suelos", "curso selectivo (formacion general)");
-        civil.agregarSemestre("Semestre6","resistencia de materiales 2", "sig y geodesia", "analisis estructural 2", "cimentaciones", "curso selectivo (formacion general)", "emprendimiento e innovavion");
+        civil.agregarSemestre("Semestre6","resistencia de materiales 2", "sig y geodesia", "analisis estructural 2", "cimentaciones", "curso selectivo (formacion general)", "emprendimiento e innovacion");
         civil.agregarSemestre("Semestre7","hidraulica general", "gestion de proyectos", "estructuras de madera", "concreto 1", "estructuras de acero 1", "dispositivos electricos");
         civil.agregarSemestre("Semestre8","concreto 2", "estructuras de acero 2", "hidrologia", "ingenieria sanitaria", "dispositivos electromecanicos", "curso selectivo");
         civil.agregarSemestre("Semestre9","introduccion a la ingenieria sismo resistente", "diseño de carreteras", "ingenieria economica", "administracion", "energia renovable (ingenieria mecanica)", "diseño e innovacion 1");
-        civil.agregarSemestre("Semestre10","diseño de obras hidraulicas", "diseño estructural", "diseño de infraestructura vial", "elementos finitos", "eficiencia energetica en edificaciones", "diseño e innovacion 2");
+        civil.agregarSemestre("Semestre10","diseño de obras hidraulicas", "diseño estructural", "diseño de infraestructura vial", "elementos finitos", "eficiencia energetica en edificaciones", "diseno e innovacion 2");
       
     //Semestres de COMPUTACION
-        computacion.agregarSemestre("Semestre1", "Ciencias de la Vida","Algoritmos y Programación Básica","Pensamiento Cuantitativo","Comunicación efectiva", "Química General","Introducción a la Ingeniería");
-        computacion.agregarSemestre("Semestre2","Programación Orientada a Objetos", "Estadística 1", "Ciudadanía global", "Física 1","Cálculo1", "Algebra Lineal 1");
-        computacion.agregarSemestre("Semestre3","Org. De Computadoras y Assembler", "Física 2", "Cálculo 2", "Programación Plataformas Móviles y Juegos", "Algoritmos y Estructuras de Datos","Guatemala en el contexto mundial");
-        computacion.agregarSemestre("Semestre4","Física 3", "Matemática Discreta 1", "Retos Ambientales y sostenibilidad", "Ecuaciones Diferenciales 1", "Investigación y Pensamiento Científico", "Programación de Microprocesadores");
-        computacion.agregarSemestre("Semestre5","Bases de Datos", "Ingeniería de Software 1", "Gráficaspor computadora", "Interacción Humano Computador", "Diseño de Videojuegos", "Selectivo de Desarrollo Profesional");
-        computacion.agregarSemestre("Semestre6","Emprendimiento e Innovación", "Ingeniería de Software 2", "Sistemas y Tecnologías Web","Selectivo de Desarrollo Profesional", "Lógica Matemática", "Programación Avanzada de Videojuegos");
-        computacion.agregarSemestre("Semestre7","Inteligencia Artificial", "Minería de Datos", "Selectivo: Ingeniería Financiera o Microeconomia","Análisis y Diseño de Algoritmos", "Sistemas Operativos", "Desarrollo Ágil de negocios tecnológicos");
-        computacion.agregarSemestre("Semestre8","Administración de Proyectos de T", "Data Science 1", "Selectivo", "Redes", "Arquitectura Empresarial", "Modelación y Simulación");
-        computacion.agregarSemestre("Semestre9","Diseño e Innovación en Ingeniería 1", "Computación Paralela y DistribuÍda", "Práctica Profesional","Diseño de Lenguajes de Programación", "Selectivo", "Seguridad en Sistemas de Computación");
-        computacion.agregarSemestre("Semestre10","Administración y Mantenimiento sistemas", "Seguridad Ofensiva", "Construcción de Compiladores", "Gestion y admon detalentos", "Planeación Estratégica y Operacional", "Diseño e Innovación en Ingeniería 2");
+        computacion.agregarSemestre("Semestre1", "ciencias de la Vida","algoritmos y programación Básica","pensamiento cuantitativo","comunicación efectiva", "quimica general","introduccion a la ingenieria");
+        computacion.agregarSemestre("Semestre2","programación orientada a objetos", "estadística 1", "ciudadanía global", "fisica 1","calculo1", "algebra lineal 1");
+        computacion.agregarSemestre("Semestre3","org. de computadoras y assembler", "fisica 2", "calculo 2", "programación plataformas moviles y juegos", "algoritmos y estructuras de datos","guatemala en el contexto mundial");
+        computacion.agregarSemestre("Semestre4","fisica 3", "matematica discreta 1", "retos ambientales y sostenibilidad", "ecuaciones diferenciales 1", "investigacion y pensamiento cientifico", "programación de microprocesadores");
+        computacion.agregarSemestre("Semestre5","bases de datos", "ingeniería de software 1", "graficaspor computadora", "interacción humano computador", "diseño de videojuegos", "selectivo de desarrollo profesional");
+        computacion.agregarSemestre("Semestre6","emprendimiento e innovacion", "ingenieria de software 2", "sistemas y tecnologias web","selectivo de desarrollo profesional", "logica matematica", "programacion avanzada de videojuegos");
+        computacion.agregarSemestre("Semestre7","inteligencia artificial", "mineria de datos", "selectivo: ingenieria financiera o microeconomia","analisis y diseno de algoritmos", "sistemas operativos", "desarrollo agil de negocios tecnologicos");
+        computacion.agregarSemestre("Semestre8","administracion de proyectos de t", "data science 1", "selectivo", "redes", "arquitectura empresarial", "modelación y simulación");
+        computacion.agregarSemestre("Semestre9","siseño e innovación en ingenieria 1", "computacion paralela y distribuida", "practica profesional","diseño de lenguajes de programación", "selectivo", "seguridad en sistemas de computacion");
+        computacion.agregarSemestre("Semestre10","administracion y mantenimiento sistemas", "seguridad ofensiva", "construccion de compiladores", "gestion y admon detalentos", "planeacion sstrategica y operacional", "diseño e innovación en ingeniería 2");
     }
     
-    public ArrayList<String> compararCarreras(){
+    public String compararCarreras(String nueva,String actual, int semestre){
        //aprobadas = matematica.buscarSemestre(1);
-       pendientes.clear();;
-       nuevaCarrera = mecanica.imprimirCarrera();
+       pendientes.clear();
+       Carrera n= buscar(nueva);
+       Carrera actualc = buscar(actual);
+       nuevaCarrera = n.imprimirCarrera();
        String c;
        for (int x=0; x<nuevaCarrera.size();x++){
            c = nuevaCarrera.get(x);
-           if (!matematica.buscarCurso(c,1)){
+           if (!actualc.buscarCurso(c,semestre)){
                //Lo metes al nuevo array
                pendientes.add(c);
                
            }
        }
-       return pendientes;
-        }
+       String s = "";
+       for (int i = 0; i < pendientes.size(); i++){
+           s = s + pendientes.get(i) + "\n";
+       }
+       return s;
+
+    }
     
+    public Carrera buscar(String c){
+        if (c == "mecanica"){
+            return mecanica;
+        }
+        if (c == "computacion"){
+            return computacion;
+        }
+        if (c == "matematica"){
+            return matematica;
+        }
+        if (c == "civil"){
+            return civil;
+        }
+        if (c == "administracion"){
+            return administracion;
+        }
+        return null;
+        
+    }
 }
