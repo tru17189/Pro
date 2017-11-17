@@ -34,9 +34,12 @@ public class Alumno {
 	* @param edad
 	*/
 	public void setEdad(float edad){
-		this.edad = edad;}
+		this.edad = edad;
+	}
+	
 	public float getEdad(){
-		return edad;}
+		return edad;
+	}
 	
 	/**
 	* @param sexo
