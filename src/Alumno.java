@@ -5,8 +5,10 @@
  */
 
 /**
- *
- * @author ottoalexander
+ * @author Alexander Trujillo, Carné 17189
+ * @author Mariana Morales, Carné 17235
+ * @author Estefania Barrio, Carné 17927
+ * @version 11/16/2017
  */
 public class Alumno {
     
@@ -27,37 +29,61 @@ public class Alumno {
 		nombre = "";
 		Carnet = 0;
 	}
-        
+	
+        /**
+	* @param edad
+	*/
 	public void setEdad(float edad){
 		this.edad = edad;}
 	public float getEdad(){
 		return edad;}
-
+	
+	/**
+	* @param sexo
+	*/
 	public void setSexo(String sexo){
 		this.sexo = sexo;}
 	public String getSexo(){
 		return sexo;}
 
+	/**
+	* @param nombre
+	*/
 	public void setNombre(String nombre){
 		this.nombre = nombre;}
 	public String getNombre(){
 		return nombre;}
 	
+	/**
+	* @param Carnet
+	*/
 	public void setCarnet(long Carnet){
 		this.Carnet = Carnet;}
 	public long getCarnet(){
 		return Carnet;}
 
+	/**
+	* @param suCarrera
+	*/
 	public void setCarrera(Carrera suCarrera){
 		miCarrera = suCarrera;}
 	public Carrera getCarrera(){
 		return miCarrera;}
         
+	/**
+	* @param suNuevaCarrera
+	*/
         public void setNuevaCarrera(Carrera suNuevaCarrera){
 		miNuevaCarrera = suNuevaCarrera;}
+	/**
+	* @return
+	*/
 	public Carrera getNuevaCarrera(){
 		return miNuevaCarrera;}
 	
+	/**
+	* @return
+	*/
 	public String toString(){
 		String cadena = "El nombre del Alumno es: "+nombre+"\n"+"Edad: "+edad+
                 "\n"+"Sexo: "+sexo+"\n"+"Numero de carnet: "+Carnet;
