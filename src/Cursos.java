@@ -175,7 +175,7 @@ public class Cursos extends javax.swing.JFrame {
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Respuesta)
-                                .addGap(84, 84, 84)))))
+                                .addGap(13, 13, 13)))))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -256,12 +256,12 @@ public class Cursos extends javax.swing.JFrame {
         }
         
         if(o1_1.isSelected() && (o2_1.isSelected() || o2_2.isSelected()) && (o3_1.isSelected() || o3_2.isSelected()) &&
-          (o4_1.isSelected() || o4_2.isSelected()) && (o5_1.isSelected() || o5_2.isSelected())  &&  o6_2.isSelected()
+          (o4_1.isSelected() || o4_2.isSelected()) && o5_1.isSelected()   &&  o6_2.isSelected()
            && (o7_1.isSelected() || o7_2.isSelected()) && o8_1.isSelected()){
-          Respuesta.setText(String.valueOf("Ingeniería en Ciencia de la Computacióna, \n¿Listo para crear?."));  
+          Respuesta.setText(String.valueOf("Ingeniería en Ciencia de la Computación, \n¿Listo para crear?."));  
         }
         
-        if((o1_1.isSelected() || o1_2.isSelected()) && (o2_1.isSelected() || o2_2.isSelected()) && o3_1.isSelected() &&
+        if(o1_1.isSelected() && o2_2.isSelected() && o3_1.isSelected() &&
           o4_2.isSelected() && o5_1.isSelected()  && (o6_1.isSelected() || o6_2.isSelected())
            && o7_1.isSelected() && (o8_1.isSelected() || o8_2.isSelected())){
           Respuesta.setText(String.valueOf("Matemática Aplicada, \nCambia el presente y el futuro."));  
@@ -279,11 +279,21 @@ public class Cursos extends javax.swing.JFrame {
           Respuesta.setText(String.valueOf("Ingeniería Industrial, \nHaz Efectivo el mundo."));  
         }
         
-         if((o1_1.isSelected() || o1_2.isSelected()) && o2_1.isSelected() && o3_2.isSelected() &&
-          (o4_1.isSelected() || o4_2.isSelected()) && o5_2.isSelected()  && (o6_1.isSelected() || o6_2.isSelected()) && 
-           o7_1.isSelected() && o8_2.isSelected()){
-          Respuesta.setText(String.valueOf("Ingeniería Industrial, \nHaz Efectivo el mundo."));  
+         if((o1_1.isSelected() || o1_2.isSelected()) && (o2_1.isSelected() || o2_2.isSelected()) && (o3_1.isSelected() || o3_2.isSelected()) &&
+           o4_2.isSelected() && o5_1.isSelected()  && o6_2.isSelected() && 
+           (o7_1.isSelected() || o7_2.isSelected()) && (o8_1.isSelected() || o8_2.isSelected())){
+          Respuesta.setText(String.valueOf("Quimica Pura, \nCrea soluciones."));  
         }
+         
+         if((o1_1.isSelected() || o1_2.isSelected()) && (o2_1.isSelected() || o2_2.isSelected()) && (o3_1.isSelected() || o3_2.isSelected()) &&
+           o4_2.isSelected() && o5_1.isSelected()  && o6_2.isSelected() && 
+           (o7_1.isSelected() || o7_2.isSelected()) && (o8_1.isSelected() || o8_2.isSelected())){
+          Respuesta.setText(String.valueOf("Quimica Pura, \nCrea soluciones."));  
+        }
+         
+         else{
+         Respuesta.setText(String.valueOf("Ingeniería Industrial, \nHaz Efectivo el mundo."));
+         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
