@@ -37,6 +37,9 @@ public class Alumno {
 		this.edad = edad;
 	}
 	
+	/**
+	* @return
+	*/
 	public float getEdad(){
 		return edad;
 	}
@@ -48,6 +51,9 @@ public class Alumno {
 		this.sexo = sexo;
 	}
 	
+	/**
+	* @return
+	*/
 	public String getSexo(){
 		return sexo;
 	}
@@ -59,6 +65,9 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 	
+	/**
+	* @return
+	*/
 	public String getNombre(){
 		return nombre;
 	}
@@ -70,6 +79,9 @@ public class Alumno {
 		this.Carnet = Carnet;
 	}
 	
+	/**
+	* @return
+	*/
 	public long getCarnet(){
 		return Carnet;
 	}
@@ -81,6 +93,9 @@ public class Alumno {
 		miCarrera = suCarrera;
 	}
 	
+	/**
+	* @return
+	*/
 	public Carrera getCarrera(){
 		return miCarrera;
 	}
