@@ -12,8 +12,10 @@ import org.mongodb.morphia.query.Query;
  */
 
 /**
- *
- * @author ottoalexander
+ * @author Alexander Trujillo, Carné 17189
+ * @author Mariana Morales, Carné 17235
+ * @author Estefania Barrio, Carné 17927
+ * @version 11/16/201
  */
 public class Base {
       int numero = 0;
