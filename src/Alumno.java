@@ -52,15 +52,18 @@ public class Alumno {
 	public void setNombre(String nombre){
 		this.nombre = nombre;}
 	public String getNombre(){
-		return nombre;}
+		return nombre;
+	}
 	
 	/**
 	* @param Carnet
 	*/
 	public void setCarnet(long Carnet){
-		this.Carnet = Carnet;}
+		this.Carnet = Carnet;
+	}
 	public long getCarnet(){
-		return Carnet;}
+		return Carnet;
+	}
 
 	/**
 	* @param suCarrera
@@ -74,12 +77,15 @@ public class Alumno {
 	* @param suNuevaCarrera
 	*/
         public void setNuevaCarrera(Carrera suNuevaCarrera){
-		miNuevaCarrera = suNuevaCarrera;}
+		miNuevaCarrera = suNuevaCarrera;
+	}
+	
 	/**
 	* @return
 	*/
 	public Carrera getNuevaCarrera(){
-		return miNuevaCarrera;}
+		return miNuevaCarrera;
+	}
 	
 	/**
 	* @return
